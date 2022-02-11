@@ -4,13 +4,12 @@ public class StaticRecapTwo {
 
 	// static method
 	public static void getInfo() {
-		StaticRecapOne obj = new StaticRecapOne();
+		
+		StaticRecapOne.isJavaFun = true; // we calling a static variable 
+		StaticRecapOne.totalAmount = 1111; // we calling a static variable 
 
-		obj.isJavaFun = true;
-		obj.totalAmount = 1111;
-
-		System.out.println(obj.isJavaFun);
-		System.out.println(obj.totalAmount);
+		System.out.println(StaticRecapOne.isJavaFun); 
+		System.out.println(StaticRecapOne.totalAmount);
 
 		StaticRecapOne.addNum(5, 8);
 
@@ -19,10 +18,10 @@ public class StaticRecapTwo {
 	// non-static method
 	public void statusUpdate() {
 
-		StaticRecapOne obj = new StaticRecapOne();
+		StaticRecapOne obj = new StaticRecapOne(); // created a new object so we can access an instance variables
 
-		obj.month = "January";
-		obj.iLikeJava = "Java Is Life";
+		obj.month = "January";     // instance variable #1
+		obj.iLikeJava = "Java Is Life"; //instance variable #1
 
 		System.out.println(obj.month);
 		System.out.println(obj.iLikeJava);
@@ -33,7 +32,7 @@ public class StaticRecapTwo {
 
 	public static void main(String[] args) {
 
-		StaticRecapTwo.getInfo();
+		getInfo();
 
 	}
 
